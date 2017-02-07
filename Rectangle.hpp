@@ -1,19 +1,27 @@
 /*
+  Orion Davis 3003072 ord4@zips.uakron.edu
+  The University of Akron, Computer Science II
+  ASSGN3: Sophisticated Rectangle
+
   This is the interface file for the Rectangle class
 */
-//Create a subclass for points??
+#include "Point.hpp"
+
 class Rectangle{
   private:
-    //Delcare the variables to hold the points of the rectangle
-    double p1;
-    double p2;
-    double p3;
-    double p4;
+    //Create instances of the point class for the 4 points of rectangle
+    Point p1;
+    Point p2;
+    Point p3;
+    Point p4;
+
+    //Define a couple variables that will be called upon more than once
+    //Should these be removed to make sure the data doesn't become stale?
+    double lengthVar;
+    double widthVar;
 
   public:
-    void Rectangle(); //Default constructor will set all points to 0 to start
-
-    void setCoords(double, double, double, double); //Set points based on passed values
+    void setCoords(Point, Point, Point, Point); //Set points based on passed values
 
     double length(); //Determine the length of the rectangle and return to user
 
