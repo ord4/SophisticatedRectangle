@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/orion/Documents/code/cs2/SophisticatedRectangle/Point.cpp
+Point.hpp
+/home/orion/Documents/code/cs2/SophisticatedRectangle/Point.hpp
+
+/home/orion/Documents/code/cs2/SophisticatedRectangle/Point.hpp
+
+/home/orion/Documents/code/cs2/SophisticatedRectangle/Rectangle.cpp
+cmath
+-
+Rectangle.hpp
+/home/orion/Documents/code/cs2/SophisticatedRectangle/Rectangle.hpp
+Point.hpp
+/home/orion/Documents/code/cs2/SophisticatedRectangle/Point.hpp
+
+/home/orion/Documents/code/cs2/SophisticatedRectangle/Rectangle.hpp
+Point.hpp
+/home/orion/Documents/code/cs2/SophisticatedRectangle/Point.hpp
+
+/home/orion/Documents/code/cs2/SophisticatedRectangle/main.cpp
+iostream
+-
+stdexcept
+-
+Rectangle.hpp
+/home/orion/Documents/code/cs2/SophisticatedRectangle/Rectangle.hpp
+Point.hpp
+/home/orion/Documents/code/cs2/SophisticatedRectangle/Point.hpp
+
