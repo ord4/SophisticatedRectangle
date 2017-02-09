@@ -15,7 +15,7 @@ int main(){
   // Create the points of the rectangles
   Point w{1.0, 1.0};
   Point x{5.0, 1.0};
-  Point y{5.0, 3.0};
+  Point y{5.0, 3.0}; 
   Point z{1.0, 3.0};
   Point j{0.0, 0.0};
   Point k{1.0, 0.0};
@@ -23,8 +23,7 @@ int main(){
   Point n{0.0, 1.0};
 
   // Create first rectangle, r1, with points z, y, x, and w
-  Rectangle r1;
-  r1.setCoords(z, y, x, w);
+  Rectangle r1{z, y, x, w};
 
   std::cout << "Rectangle 1:";
   std::cout << "\nlength = " << r1.length();
@@ -34,8 +33,7 @@ int main(){
   std::cout << "\nThe rectangle " << (r1.square() ? "is" : "is not") << " a square.\n";
 
   // Create second rectangnle, r2, with points j, k, m, and n
-  Rectangle r2;
-  r2.setCoords(j, k, m, n);
+  Rectangle r2{j, k, m, n};
 
   std::cout << "\nRectangle 2:";
   std::cout << "\nlength = " << r2.length();

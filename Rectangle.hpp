@@ -5,6 +5,9 @@
 
   This is the interface file for the Rectangle class
 */
+#ifndef RECTANGLE_HPP
+#define RECTANGLE_HPP
+
 #include "Point.hpp"
 
 class Rectangle{
@@ -21,15 +24,19 @@ class Rectangle{
     double widthVar;
 
   public:
+    explicit Rectangle(Point, Point, Point, Point);
+
     void setCoords(Point, Point, Point, Point); //Set points based on passed values
 
-    double length(); //Determine the length of the rectangle and return to user
+    double length() const; //Determine the length of the rectangle and return to user
 
-    double width(); //Determine the width and return to the user
+    double width() const; //Determine the width and return to the user
 
-    double perimeter(); //Calculate the perimeter and return to user
+    double perimeter() const; //Calculate the perimeter and return to user
 
-    double area(); //Calculate area and return to user
+    double area() const; //Calculate area and return to user
 
-    bool square(); //Determine whether or not the rectangle is a square
+    bool square() const; //Determine whether or not the rectangle is a square
 };
+
+#endif

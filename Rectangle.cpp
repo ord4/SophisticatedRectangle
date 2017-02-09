@@ -6,10 +6,13 @@
   This is the implementation file for the Rectangle class
 */
 #include <cmath>
-
 #include "Rectangle.hpp"
+#include "Point.hpp"
 
-//Come up with a decent name for the passed values
+Rectangle::Rectangle(Point p1, Point p2, Point p3, Point p4){
+  setCoords(p1, p2, p3, p4);
+}
+
 void Rectangle::setCoords(Point p1, Point p2, Point p3, Point p4){
    p1 = p1;
    p2 = p2;
@@ -17,7 +20,7 @@ void Rectangle::setCoords(Point p1, Point p2, Point p3, Point p4){
    p4 = p4;
 }
 
-double Rectangle::length(){
+double Rectangle::length() const{ //const b/c data shouldn't be modified
    if ((abs(p1.yCoor - p4.yCoord)) <= (abs(p1.xCoord - p2.xCoord))){
       lengthVar = abs(p1.xCoord - p2.xCoord);
       return lengthVar;
@@ -28,7 +31,7 @@ double Rectangle::length(){
    }
 }
 
-double Rectangle::width(){
+double Rectangle::width() const{
    if ((abs(p1.yCoor - p4.yCoord)) >= (abs(p1.xCoord - p2.xCoord))){
       widthVar = abs(p1.xCoord - p2.xCoord);
       return widthVar
@@ -39,15 +42,15 @@ double Rectangle::width(){
    }
 }
 
-double Rectangle::perimeter(){
+double Rectangle::perimeter() const{
    return (2 * lengthVar) + (2 * widthVar);
 }
 
-double Rectangle::area(){
+double Rectangle::area() const{
    return lengthVar * widthVar;
 }
 
 // Checks to see if length == width and returns true or false
-bool Rectangle::square(){
+bool Rectangle::square() const{
    return lengthVar == widthVar;
 }

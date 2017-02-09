@@ -8,6 +8,22 @@
 #include "Point.hpp"
 
 Point::Point(double x, double y){
-   xCoord = x;
-   yCoord = y;
+  setXCoord(x);
+  setYCoord(y);
+}
+
+ void Point::setXCoord(double x){
+  xCoord = x;
+}
+
+void Point::setYCoord(double y){
+  yCoord = y;
+}
+
+double Point::getXCoord() const{
+  return xCoord;
+}
+
+double Point::getYCoord() const{
+  return yCoord;
 }
