@@ -12,10 +12,10 @@
 
 
 int main(){
-  // Create the points of the rectangles
+// Create the points of the rectangles
   Point w{1.0, 1.0};
   Point x{5.0, 1.0};
-  Point y{5.0, 3.0}; 
+  Point y{5.0, 3.0};
   Point z{1.0, 3.0};
   Point j{0.0, 0.0};
   Point k{1.0, 0.0};
@@ -41,5 +41,4 @@ int main(){
   std::cout << "\nperimeter = " << r2.perimeter();
   std::cout << "\narea = " << r2.area();
   std::cout << "\nThe rectangle " << (r2.square() ? "is" : "is not") << " a square.\n";
-
 }

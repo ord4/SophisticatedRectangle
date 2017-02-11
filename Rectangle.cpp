@@ -4,42 +4,35 @@
   ASSGN3: Sophisticated Rectangle
 
   This is the implementation file for the Rectangle class
+
+  The program is not properly creating the points because the code for the length and width should be correct, it is a matter of there not being data to collect from these points and their functions
 */
 #include <cmath>
 #include "Rectangle.hpp"
 #include "Point.hpp"
+
+using std::abs;
 
 Rectangle::Rectangle(Point p1, Point p2, Point p3, Point p4){
   setCoords(p1, p2, p3, p4);
 }
 
 void Rectangle::setCoords(Point p1, Point p2, Point p3, Point p4){
-   p1 = p1;
-   p2 = p2;
-   p3 = p3;
-   p4 = p4;
+  pointOne.setXCoord(p1.getXCoord());
+  pointOne.setYCoord(p1.getYCoord());
+  pointTwo.setXCoord(p2.getXCoord());
+  pointTwo.setYCoord(p2.getYCoord());
 }
 
-double Rectangle::length() const{ //const b/c data shouldn't be modified
-   if ((abs(p1.yCoor - p4.yCoord)) <= (abs(p1.xCoord - p2.xCoord))){
-      lengthVar = abs(p1.xCoord - p2.xCoord);
-      return lengthVar;
-   }
-   else{
-      lengthVar = abs(p1.yCoor - p4.yCoord);
-      return lengthVar;
-   }
+
+double Rectangle::length(){
+	setLengthVar(abs(pointOne.getXCoord() - pointTwo.getXCoord()));
+	return lengthVar;
 }
 
-double Rectangle::width() const{
-   if ((abs(p1.yCoor - p4.yCoord)) >= (abs(p1.xCoord - p2.xCoord))){
-      widthVar = abs(p1.xCoord - p2.xCoord);
-      return widthVar
-   }
-   else{
-      widthVar = abs(p1.yCoor - p4.yCoord);
-      return widthVar;
-   }
+double Rectangle::width(){
+	setWidthVar(abs(pointThree.getYCoord() - pointTwo.getYCoord()));
+	return widthVar;
 }
 
 double Rectangle::perimeter() const{
@@ -53,4 +46,12 @@ double Rectangle::area() const{
 // Checks to see if length == width and returns true or false
 bool Rectangle::square() const{
    return lengthVar == widthVar;
+}
+
+void Rectangle::setLengthVar(double len){
+	lengthVar = len;
+}
+
+void Rectangle::setWidthVar(double width){
+	widthVar = width;
 }

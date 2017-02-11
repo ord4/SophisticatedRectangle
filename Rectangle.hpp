@@ -13,30 +13,33 @@
 class Rectangle{
   private:
     //Create instances of the point class for the 4 points of rectangle
-    Point p1;
-    Point p2;
-    Point p3;
-    Point p4;
+    Point pointOne;
+    Point pointTwo;
+    Point pointThree;
+    Point pointFour;
 
     //Define a couple variables that will be called upon more than once
-    //Should these be removed to make sure the data doesn't become stale?
-    double lengthVar;
-    double widthVar;
+	double lengthVar;
+	double widthVar;
 
   public:
     explicit Rectangle(Point, Point, Point, Point);
 
     void setCoords(Point, Point, Point, Point); //Set points based on passed values
 
-    double length() const; //Determine the length of the rectangle and return to user
+    double length(); //Determine the length of the rectangle and return to user
 
-    double width() const; //Determine the width and return to the user
+    double width(); //Determine the width and return to the user
 
     double perimeter() const; //Calculate the perimeter and return to user
 
     double area() const; //Calculate area and return to user
 
     bool square() const; //Determine whether or not the rectangle is a square
+
+	void setLengthVar(double);
+
+	void setWidthVar(double);
 };
 
 #endif
